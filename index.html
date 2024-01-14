@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mappy</title>
-</head>
-<body>
-    <script src="./src/app.ts"></script>
-</body>
+  </head>
+  <body>
+    <div id="map" style="height: 100vh"></div>
+    <script>
+      const apiKey = process.env.GOOGLE_API_KEY
+      const script = document.createElement('script')
+
+      script.src = `http://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=Function.prototype`
+
+      document.body.appendChild(script)
+    </script>
+    <script src="src/app.ts"></script>
+  </body>
 </html>

@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "typeRoots": ["./node_modules/@types"],
+    "baseUrl": ".",
+    "rootDir": "./src",
+    "paths": {
+      "@*": ["./src/*"]
+    }
+  },
+  "tsc-alias": {
+    "verbose": false,
+    "resolveFullPaths": true,
+    "fileExtensions": {
+      "inputGlob": "{js,jsx,mjs}",
+      "outputCheck": ["js", "json", "jsx", "mjs"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.js"],
+  "exclude": ["node_modules"]
+}
